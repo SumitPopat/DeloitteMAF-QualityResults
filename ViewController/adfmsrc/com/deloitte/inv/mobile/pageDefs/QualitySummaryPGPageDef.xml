@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="QualitySummaryPGPageDef"
+                Package="com.deloitte.inv.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="QualityDetailsDBServiceOutput"
+              id="QualityDetailsDBServiceOutputIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="quantity">
+      <AttrNames>
+        <Item Value="quantity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="planName">
+      <AttrNames>
+        <Item Value="planName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="description">
+      <AttrNames>
+        <Item Value="description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="collectionId">
+      <AttrNames>
+        <Item Value="collectionId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

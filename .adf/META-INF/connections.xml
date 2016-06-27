@@ -1,0 +1,13 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="QualityResultService" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="QualityResultService">
+        <Contents>
+          <restconnection name="QualityResultService"
+                          url="http://ussltcsnl3432.solutions.glbsnet.com:7004/XXgetQualityResults/getQualityResultsRestService/General"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>
