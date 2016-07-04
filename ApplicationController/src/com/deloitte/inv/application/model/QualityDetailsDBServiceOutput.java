@@ -2,14 +2,14 @@ package com.deloitte.inv.application.model;
 
 import oracle.maf.api.cdm.persistence.model.Entity;
 
-import java.math.BigDecimal;
+
 
 
 public class QualityDetailsDBServiceOutput extends Entity {
 
     private String planName;
     private String description;
-    private BigDecimal quantity;
+    private String quantity;
     private String itemNumber;
     private String lotNumber;
     private String supplier;
@@ -26,14 +26,14 @@ public class QualityDetailsDBServiceOutput extends Entity {
     private String character8;
     private String character9;
     private String character10;
-    private BigDecimal collectionId;
-    private BigDecimal occurrence;
+    private String collectionId;
+    private String occurrence;
     private String lastUpdateDate;
     private String qaLastUpdateDate;
-    private BigDecimal txnHeaderId;
-    private BigDecimal organizationId;
-    private BigDecimal planId;
-    private BigDecimal specId;
+    private String txnHeaderId;
+    private String organizationId;
+    private String planId;
+    private String specId;
     private String itemId;
     private String prompt1;
     private String prompt2;
@@ -63,11 +63,11 @@ public class QualityDetailsDBServiceOutput extends Entity {
         this.description = description;
     }
 
-    public BigDecimal getQuantity() {
+    public String getQuantity() {
         return this.quantity;
     }
 
-    public void setQuantity(BigDecimal quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
@@ -199,19 +199,19 @@ public class QualityDetailsDBServiceOutput extends Entity {
         this.character10 = character10;
     }
 
-    public BigDecimal getCollectionId() {
+    public String getCollectionId() {
         return this.collectionId;
     }
 
-    public void setCollectionId(BigDecimal collectionId) {
+    public void setCollectionId(String collectionId) {
         this.collectionId = collectionId;
     }
 
-    public BigDecimal getOccurrence() {
+    public String getOccurrence() {
         return this.occurrence;
     }
 
-    public void setOccurrence(BigDecimal occurrence) {
+    public void setOccurrence(String occurrence) {
         this.occurrence = occurrence;
     }
 
@@ -231,35 +231,35 @@ public class QualityDetailsDBServiceOutput extends Entity {
         this.qaLastUpdateDate = qaLastUpdateDate;
     }
 
-    public BigDecimal getTxnHeaderId() {
+    public String getTxnHeaderId() {
         return this.txnHeaderId;
     }
 
-    public void setTxnHeaderId(BigDecimal txnHeaderId) {
+    public void setTxnHeaderId(String txnHeaderId) {
         this.txnHeaderId = txnHeaderId;
     }
 
-    public BigDecimal getOrganizationId() {
+    public String getOrganizationId() {
         return this.organizationId;
     }
 
-    public void setOrganizationId(BigDecimal organizationId) {
+    public void setOrganizationId(String organizationId) {
         this.organizationId = organizationId;
     }
 
-    public BigDecimal getPlanId() {
+    public String getPlanId() {
         return this.planId;
     }
 
-    public void setPlanId(BigDecimal planId) {
+    public void setPlanId(String planId) {
         this.planId = planId;
     }
 
-    public BigDecimal getSpecId() {
+    public String getSpecId() {
         return this.specId;
     }
 
-    public void setSpecId(BigDecimal specId) {
+    public void setSpecId(String specId) {
         this.specId = specId;
     }
 

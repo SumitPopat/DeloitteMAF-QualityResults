@@ -25,15 +25,33 @@
                        xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
     </Source>
   </AdapterDataControl>
-  <AdapterDataControl id="QualityDetailsDBServiceOutput" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+  <AdapterDataControl id="QualityDetailsDBServiceOutputService"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
                       ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
                       SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
                       SupportsFindMode="false" SupportsUpdates="true"
-                      Definition="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput"
-                      BeanClass="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput"
+                      Definition="com.deloitte.inv.application.model.service.QualityDetailsDBServiceOutputService"
+                      BeanClass="com.deloitte.inv.application.model.service.QualityDetailsDBServiceOutputService"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="com.deloitte.inv.application.model.service.QualityDetailsDBServiceOutputService"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="QualityPlandetailsOutputService"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="com.deloitte.inv.application.model.service.QualityPlandetailsOutputService"
+                      BeanClass="com.deloitte.inv.application.model.service.QualityPlandetailsOutputService"
                       xmlns="http://xmlns.oracle.com/adfm/datacontrol">
     <Source>
-      <bean-definition BeanClass="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput"
+      <bean-definition BeanClass="com.deloitte.inv.application.model.service.QualityPlandetailsOutputService"
                        DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
                        EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
     </Source>

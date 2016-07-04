@@ -9,6 +9,8 @@
           path="com.deloitte.inv.mobile.pageDefs.QualitySummaryPGPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
-    <dc id="QualityDetailsDBServiceOutput" path="com.deloitte.inv.application.QualityDetailsDBServiceOutput"/>
+    <dc id="QualityPlandetailsOutputService" path="com.deloitte.inv.application.QualityPlandetailsOutputService"/>
+    <dc id="QualityDetailsDBServiceOutputService"
+        path="com.deloitte.inv.application.QualityDetailsDBServiceOutputService"/>
   </dataControlUsages>
 </Application>

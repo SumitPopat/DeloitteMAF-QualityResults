@@ -4,29 +4,60 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="root" RangeSize="25" DataControl="QualityDetailsDBServiceOutput"
-              id="QualityDetailsDBServiceOutputIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="QualityPlandetailsOutputService"
+              id="QualityPlandetailsOutputServiceIterator"/>
+    <accessorIterator MasterBinding="QualityPlandetailsOutputServiceIterator" Binds="qualityPlandetailsOutput"
+                      RangeSize="25" DataControl="QualityPlandetailsOutputService"
+                      BeanClass="com.deloitte.inv.application.model.QualityPlandetailsOutput"
+                      id="qualityPlandetailsOutputIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="QualityDetailsDBServiceOutputService"
+              id="QualityDetailsDBServiceOutputServiceIterator"/>
+    <accessorIterator MasterBinding="QualityDetailsDBServiceOutputServiceIterator" Binds="qualityDetailsDBServiceOutput"
+                      RangeSize="25" DataControl="QualityDetailsDBServiceOutputService"
+                      BeanClass="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput"
+                      id="qualityDetailsDBServiceOutputIterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="quantity">
+    <list IterBinding="qualityPlandetailsOutputIterator" ListOperMode="navigation"
+          ListIter="qualityPlandetailsOutputIterator" id="qualityPlandetailsOutput" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject">
       <AttrNames>
-        <Item Value="quantity"/>
+        <Item Value="planName"/>
       </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="planName">
+    </list>
+    <attributeValues IterBinding="qualityPlandetailsOutputIterator" id="planName">
       <AttrNames>
         <Item Value="planName"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="description">
-      <AttrNames>
-        <Item Value="description"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="QualityDetailsDBServiceOutputIterator" id="collectionId">
-      <AttrNames>
-        <Item Value="collectionId"/>
-      </AttrNames>
-    </attributeValues>
+    <tree IterBinding="qualityPlandetailsOutputIterator" id="qualityPlandetailsOutput1">
+      <nodeDefinition DefName="com.deloitte.inv.application.model.QualityPlandetailsOutput"
+                      Name="qualityPlandetailsOutput10">
+        <AttrNames>
+          <Item Value="planName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="qualityDetailsDBServiceOutputIterator" id="qualityDetailsDBServiceOutput">
+      <nodeDefinition DefName="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput"
+                      Name="qualityDetailsDBServiceOutput0">
+        <AttrNames>
+          <Item Value="planName"/>
+          <Item Value="custAccountNumber"/>
+          <Item Value="description"/>
+          <Item Value="qaLastUpdateDate"/>
+          <Item Value="collectionId"/>
+          <Item Value="occurrence"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="qualityDetailsDBServiceOutputIterator" id="qualityDetailsDBServiceOutput1">
+      <nodeDefinition DefName="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput"
+                      Name="qualityDetailsDBServiceOutput10">
+        <AttrNames>
+          <Item Value="planName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
