@@ -19,9 +19,9 @@
    </hash>
    <list n="contentSets">
       <string v="oracle.mds.internal.dt.ide.appresources.MDSAppResourceCSProvider/MDSAppContentSet"/>
-      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationBuildToolContentSet"/>
-      <string v="oracle.jdeveloper.model.PathsConfiguration/ADFContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ADFContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationBuildToolContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/MobileResourcesContentSet"/>
    </list>
@@ -75,7 +75,7 @@
             <value n="profileClass" v="oracle.adfmf.framework.dt.deploy.android.AndroidProfile"/>
             <value n="profileName" v="Android1"/>
          </hash>
-         <hash n="Android2">
+         <hash n="Android3">
             <hash n="archiveOptions">
                <value n="hasManifest" v="true"/>
             </hash>
@@ -115,9 +115,9 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/Android2/Android2.jar/"/>
+            <url n="jarURL" path="deploy/Android3/Android3.jar/"/>
             <value n="profileClass" v="oracle.adfmf.framework.dt.deploy.android.AndroidProfile"/>
-            <value n="profileName" v="Android2"/>
+            <value n="profileName" v="Android3"/>
          </hash>
          <hash n="iOS1">
             <hash n="archiveOptions">
@@ -163,7 +163,7 @@
             <value n="profileClass" v="oracle.adfmf.framework.dt.deploy.ios.McIosFrameworkProfile"/>
             <value n="profileName" v="iOS1"/>
          </hash>
-         <hash n="QualityResultsAppl_archive">
+         <hash n="QualityApp_archive">
             <hash n="archiveOptions">
                <value n="hasManifest" v="false"/>
             </hash>
@@ -193,9 +193,9 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/QualityResultsAppl_archive/QualityResultsAppl_archive.maa/"/>
+            <url n="jarURL" path="deploy/QualityApp_archive/QualityApp_archive.maa/"/>
             <value n="profileClass" v="oracle.adfmf.framework.dt.deploy.applicationarchive.ApplicationArchiveProfile"/>
-            <value n="profileName" v="QualityResultsAppl_archive"/>
+            <value n="profileName" v="QualityApp_archive"/>
          </hash>
          <hash n="Windows1">
             <hash n="archiveOptions">
@@ -246,8 +246,8 @@
          <string v="Windows1"/>
          <string v="iOS1"/>
          <string v="Android1"/>
-         <string v="QualityResultsAppl_archive"/>
-         <string v="Android2"/>
+         <string v="QualityApp_archive"/>
+         <string v="Android3"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">

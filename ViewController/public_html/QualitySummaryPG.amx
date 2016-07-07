@@ -5,55 +5,49 @@
     <amx:facet name="header">
       <amx:outputText value="Quality Summary" id="ot1"/>
     </amx:facet>
-    <amx:panelStretchLayout id="psl1" scrollPolicy="scroll" rendered="true">
-      <amx:facet name="top">
-          <amx:selectOneChoice value="#{pageFlowScope.selectedValue}"
-                         label="Plan Name" id="soc1"
-                         valueChangeListener="#{TestManagedBean.dropDownSelected}">
-      <amx:selectItems value="#{bindings.qualityPlandetailsOutput.items}" id="si1"/>
-    </amx:selectOneChoice>
-    </amx:facet>
+    <amx:panelStretchLayout id="psl1">
+      <amx:facet name="top"/>
       <amx:facet name="center">
-    <amx:listView var="row" value="#{bindings.qualityDetailsDBServiceOutput.collectionModel}"
-                  fetchSize="#{bindings.qualityDetailsDBServiceOutput.rangeSize}"
-                  selectedRowKeys="#{bindings.qualityDetailsDBServiceOutput.collectionModel.selectedRow}"
-                  initialScrollRowKeys="#{bindings.qualityDetailsDBServiceOutput.collectionModel.selectedRow}"
-                  selectionListener="#{bindings.qualityDetailsDBServiceOutput.collectionModel.makeCurrent}"
-                  showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
-      <amx:listItem id="li1">
-        <amx:tableLayout id="tl3" width="100%">
-            <amx:rowLayout id="rl3">
-            <amx:cellFormat id="cf6" width="10px"/>
-            <amx:cellFormat id="cf7" width="90%">
-                <amx:panelGroupLayout id="pgl1" layout="vertical">
+        <amx:selectOneChoice value="#{pageFlowScope.selectedLov}" label="Plan Name" id="soc2"
+                             valueChangeListener="#{qualityBean.lovSelected}">
+          <amx:selectItems value="#{bindings.planId.items}" id="si2"/>
+        </amx:selectOneChoice>
+        <amx:listView var="row" value="#{bindings.qualityResultsDBOutput.collectionModel}"
+                      fetchSize="#{bindings.qualityResultsDBOutput.rangeSize}"
+                      selectedRowKeys="#{bindings.qualityResultsDBOutput.collectionModel.selectedRow}"
+                      initialScrollRowKeys="#{bindings.qualityResultsDBOutput.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.qualityResultsDBOutput.collectionModel.makeCurrent}"
+                      showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1"
+                      rendered="#{pageFlowScope.selectedLov!=null}">
+          <amx:listItem id="li1">
+            <amx:tableLayout id="tl1" width="100%">
+              <amx:rowLayout id="rl1">
+                <amx:cellFormat id="cf1" width="10px"/>
+                <amx:cellFormat id="cf2" width="90%">
+                  <amx:panelGroupLayout id="pgl1" layout="vertical">
                     <amx:spacer id="s1" height="10"/>
-                    <amx:panelGroupLayout id="pgl11" layout="horizontal">
-                        <amx:spacer id="s9" width="25"/>
-                        <amx:outputText value="Entry Date : #{row.qaLastUpdateDate}" id="ot2"/>
-                        <amx:spacer id="s5" width="10"/>
-                        <amx:outputText value=" Created By : " id="ot5"/>
+                    <amx:panelGroupLayout id="pgl2" layout="horizontal">
+                      <amx:spacer id="s2" width="25"/>
+                      <amx:outputText value="Entry Date : #{row.qaCreationDate}" id="ot3"/>
+                      <amx:spacer id="s3" width="10"/>
+                      <amx:outputText value="Created By : #{row.qaCreatedByName}" id="ot2"/>
                     </amx:panelGroupLayout>
-                    <amx:spacer id="s2" height="7"/>
-                    <amx:panelGroupLayout id="pgl9" layout="horizontal">
-                        <amx:spacer id="s7" width="25"/>
-                        <amx:outputText value="Collection : #{row.collectionId} " id="ot3"/>
-                        <amx:spacer id="s16" width="10"/>
-                        <amx:outputText value=" Occurence: #{row.occurrence}"
-                                                                            id="ot14"/>
+                    <amx:spacer id="s4" height="7"/>
+                    <amx:panelGroupLayout id="pgl3" layout="horizontal">
+                      <amx:spacer id="s5" height="25"/>
+                      <amx:outputText value="Collection : #{row.collectionId}" id="ot4"/>
+                      <amx:spacer id="s6" width="10"/>
+                      <amx:outputText value="Occurence : #{row.occurrence}" id="ot5"/>
                     </amx:panelGroupLayout>
-                </amx:panelGroupLayout>
-            </amx:cellFormat>
-            </amx:rowLayout>
-        </amx:tableLayout>
-        <amx:spacer id="s3" height="20"/>
-        <amx:outputText value="#{row.planName}" id="ot7"/>
-        <amx:outputText value="#{row.custAccountNumber}" id="ot4"/>
-        <amx:outputText value="#{row.description}" id="ot8"/>
-      </amx:listItem>
-    </amx:listView>
-     </amx:facet>
-    <amx:facet name="bottom"/>
+                  </amx:panelGroupLayout>
+                </amx:cellFormat>
+              </amx:rowLayout>
+            </amx:tableLayout>
+            <!--<amx:outputText value="#{row.planName}" id="ot1"/>-->
+          </amx:listItem>
+        </amx:listView>
+      </amx:facet>
+      <amx:facet name="bottom"/>
     </amx:panelStretchLayout>
-    <amx:outputText value="#{pageFlowScope.selectedValue}" id="ot6"/>
   </amx:panelPage>
 </amx:view>

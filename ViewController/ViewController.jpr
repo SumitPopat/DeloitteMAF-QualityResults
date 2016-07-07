@@ -74,7 +74,7 @@
       <list n="dependencyList">
          <hash>
             <hash n="dependable">
-               <url n="sourceOwnerURL" path="../QualityResultsAppl.jws"/>
+               <url n="sourceOwnerURL" path="../QualityApp.jws"/>
                <url n="sourceURL" path="../ApplicationController/ApplicationController.jpr"/>
             </hash>
             <value n="recognizerId" v="oracle.jdeveloper.library"/>
@@ -289,8 +289,8 @@
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="QualityResultsAppl-ViewController-webapp"/>
-      <value n="j2eeWebContextRoot" v="QualityResultsAppl-ViewController-context-root"/>
+      <value n="j2eeWebAppName" v="QualityApp-ViewController-webapp"/>
+      <value n="j2eeWebContextRoot" v="QualityApp-ViewController-context-root"/>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <hash n="jdkReference">

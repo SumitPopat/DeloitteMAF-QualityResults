@@ -10,7 +10,6 @@
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="QualityPlandetailsOutputService" path="com.deloitte.inv.application.QualityPlandetailsOutputService"/>
-    <dc id="QualityDetailsDBServiceOutputService"
-        path="com.deloitte.inv.application.QualityDetailsDBServiceOutputService"/>
+    <dc id="QualityResultsDBOutputService" path="com.deloitte.inv.application.QualityResultsDBOutputService"/>
   </dataControlUsages>
 </Application>

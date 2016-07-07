@@ -287,7 +287,7 @@
             <value n="profileClass" v="oracle.adfmf.framework.dt.deploy.features.FeatureArchiveProfile"/>
             <value n="profileName" v="ApplicationController_MobileFeatureArchive2"/>
          </hash>
-         <hash n="QualityResultsAppl_ApplicationController">
+         <hash n="QualityApp_ApplicationController">
             <value n="adflib-connectionDetails" v="true"/>
             <value n="adflib-nonReusablesError" v="false"/>
             <hash n="archiveOptions">
@@ -322,21 +322,21 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/QualityResultsAppl_ApplicationController.jar"/>
+            <url n="jarURL" path="deploy/QualityApp_ApplicationController.jar"/>
             <hash n="LibraryDependencies"/>
             <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
-            <value n="profileName" v="QualityResultsAppl_ApplicationController"/>
+            <value n="profileName" v="QualityApp_ApplicationController"/>
          </hash>
       </hash>
       <list n="profileList">
          <string v="ApplicationController_MobileFeatureArchive1"/>
          <string v="ApplicationController_MobileFeatureArchive2"/>
-         <string v="QualityResultsAppl_ApplicationController"/>
+         <string v="QualityApp_ApplicationController"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="QualityResultsAppl-ApplicationController-webapp"/>
-      <value n="j2eeWebContextRoot" v="QualityResultsAppl-ApplicationController-context-root"/>
+      <value n="j2eeWebAppName" v="QualityApp-ApplicationController-webapp"/>
+      <value n="j2eeWebContextRoot" v="QualityApp-ApplicationController-context-root"/>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">

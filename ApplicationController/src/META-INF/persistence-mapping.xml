@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mobileObjectPersistence xmlns="http://xmlns.oracle.com/adf/mf/amx/cdm/persistenceMapping" logWebServiceCalls="true">
-   <classMappingDescriptor className="com.deloitte.inv.application.model.QualityDetailsDBServiceOutput" persisted="true">
-      <crudServiceClass className="com.deloitte.inv.application.model.service.QualityDetailsDBServiceOutputService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.maf.api.cdm.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.maf.api.cdm.persistence.manager.RestJSONPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="true" autoQuery="true" enableOfflineTransactions="true"/>
-      <table name="QUALITY_DETAILS_DBSERVICE_OUTPUT">
-         <primaryKeyColumn name="PLAN_NAME"/>
+   <classMappingDescriptor className="com.deloitte.inv.application.model.QualityResultsDBOutput" persisted="true">
+      <crudServiceClass className="com.deloitte.inv.application.model.service.QualityResultsDBOutputService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.maf.api.cdm.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.maf.api.cdm.persistence.manager.RestJSONPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="true" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="QUALITY_RESULTS_DBOUTPUT">
+         <primaryKeyColumn name="PLAN_ID"/>
       </table>
       <attributeMappings>
-         <directMapping attributeName="planName" payloadAttributeName="PLAN_NAME" columnName="PLAN_NAME" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="planName" payloadAttributeName="PLAN_NAME" columnName="PLAN_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="description" payloadAttributeName="DESCRIPTION" columnName="DESCRIPTION" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="quantity" payloadAttributeName="QUANTITY" columnName="QUANTITY" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.String" keyAttribute="false"/>
+         <directMapping attributeName="quantity" payloadAttributeName="QUANTITY" columnName="QUANTITY" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
          <directMapping attributeName="itemNumber" payloadAttributeName="ITEM_NUMBER" columnName="ITEM_NUMBER" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="lotNumber" payloadAttributeName="LOT_NUMBER" columnName="LOT_NUMBER" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="supplier" payloadAttributeName="SUPPLIER" columnName="SUPPLIER" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
@@ -25,44 +25,47 @@
          <directMapping attributeName="character8" payloadAttributeName="CHARACTER8" columnName="CHARACTER8" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="character9" payloadAttributeName="CHARACTER9" columnName="CHARACTER9" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="character10" payloadAttributeName="CHARACTER10" columnName="CHARACTER10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="collectionId" payloadAttributeName="Collection_id" columnName="COLLECTION_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.String" keyAttribute="false"/>
-         <directMapping attributeName="occurrence" payloadAttributeName="Occurrence" columnName="OCCURRENCE" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.String" keyAttribute="false"/>
+         <directMapping attributeName="collectionId" payloadAttributeName="Collection_id" columnName="COLLECTION_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="occurrence" payloadAttributeName="Occurrence" columnName="OCCURRENCE" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
          <directMapping attributeName="lastUpdateDate" payloadAttributeName="last_update_date" columnName="LAST_UPDATE_DATE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="qaLastUpdateDate" payloadAttributeName="qa_last_update_date" columnName="QA_LAST_UPDATE_DATE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="txnHeaderId" payloadAttributeName="txn_header_id" columnName="TXN_HEADER_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.String" keyAttribute="false"/>
-         <directMapping attributeName="organizationId" payloadAttributeName="organization_id" columnName="ORGANIZATION_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.String" keyAttribute="false"/>
-         <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.String" keyAttribute="false"/>
-         <directMapping attributeName="specId" payloadAttributeName="spec_id" columnName="SPEC_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.String" keyAttribute="false"/>
-         <directMapping attributeName="itemId" payloadAttributeName="Item_id" columnName="ITEM_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt1" payloadAttributeName="PROMPT1" columnName="PROMPT1" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt2" payloadAttributeName="PROMPT2" columnName="PROMPT2" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt3" payloadAttributeName="PROMPT3" columnName="PROMPT3" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt4" payloadAttributeName="PROMPT4" columnName="PROMPT4" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt5" payloadAttributeName="PROMPT5" columnName="PROMPT5" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt6" payloadAttributeName="PROMPT6" columnName="PROMPT6" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt7" payloadAttributeName="PROMPT7" columnName="PROMPT7" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt8" payloadAttributeName="PROMPT8" columnName="PROMPT8" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt9" payloadAttributeName="PROMPT9" columnName="PROMPT9" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="txnHeaderId" payloadAttributeName="txn_header_id" columnName="TXN_HEADER_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="organizationId" payloadAttributeName="organization_id" columnName="ORGANIZATION_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="true"/>
+         <directMapping attributeName="specId" payloadAttributeName="spec_id" columnName="SPEC_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="itemId" payloadAttributeName="Item_id" columnName="ITEM_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="qaLastUpdatedByName" payloadAttributeName="QA_LAST_UPDATED_BY_NAME" columnName="QA_LAST_UPDATED_BY_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="qaCreatedByName" payloadAttributeName="QA_CREATED_BY_NAME" columnName="QA_CREATED_BY_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="qaCreationDate" payloadAttributeName="qa_creation_date" columnName="QA_CREATION_DATE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt1" payloadAttributeName="prompt1" columnName="PROMPT1" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt2" payloadAttributeName="prompt2" columnName="PROMPT2" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt3" payloadAttributeName="prompt3" columnName="PROMPT3" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt4" payloadAttributeName="prompt4" columnName="PROMPT4" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt5" payloadAttributeName="prompt5" columnName="PROMPT5" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt6" payloadAttributeName="prompt6" columnName="PROMPT6" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt7" payloadAttributeName="prompt7" columnName="PROMPT7" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt8" payloadAttributeName="prompt8" columnName="PROMPT8" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt9" payloadAttributeName="prompt9" columnName="PROMPT9" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt10" payloadAttributeName="PROMPT10" columnName="PROMPT10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
       </attributeMappings>
       <methods>
-         <findAllMethod uri="/XXgetQualityResults/getQualityResultsRestService/{planName}" connectionName="QualityService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityDetailsDBServiceOutput">
+         <findAllMethod uri="/XXgetQualityResults/getQualityResultsRS/{planId}" connectionName="QualityService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getQualityResultsDBOutput">
             <headerParameter name="Content-Type" value="application/json"/>
-            <parameter name="planName" value="General%20Receiving%20(M1)" valueProvider="LiteralValue" pathParam="true"/>
+            <parameter name="planId" value="#{pageFlowScope.selectedLov}" valueProvider="ELExpression" pathParam="true"/>
          </findAllMethod>
       </methods>
    </classMappingDescriptor>
    <classMappingDescriptor className="com.deloitte.inv.application.model.QualityPlandetailsOutput" persisted="true">
       <crudServiceClass className="com.deloitte.inv.application.model.service.QualityPlandetailsOutputService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.maf.api.cdm.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.maf.api.cdm.persistence.manager.RestJSONPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="true" autoQuery="true" enableOfflineTransactions="true"/>
       <table name="QUALITY_PLANDETAILS_OUTPUT">
-         <primaryKeyColumn name="PLAN_NAME"/>
+         <primaryKeyColumn name="PLAN_ID"/>
       </table>
       <attributeMappings>
-         <directMapping attributeName="planName" payloadAttributeName="plan_name" columnName="PLAN_NAME" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
-         <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="planName" payloadAttributeName="plan_name" columnName="PLAN_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="true"/>
       </attributeMappings>
       <methods>
-         <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{orgCode}" connectionName="OrgCodeService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityPlandetailsOutput">
+         <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{orgCode}" connectionName="OrgService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getQualityPlandetailsOutput">
             <headerParameter name="Content-Type" value="application/json"/>
             <parameter name="orgCode" value="M1" valueProvider="LiteralValue" pathParam="true"/>
          </findAllMethod>

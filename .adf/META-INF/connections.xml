@@ -9,12 +9,12 @@
       </XmlRefAddr>
     </RefAddresses>
   </Reference>
-  <Reference name="OrgCodeService" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+  <Reference name="OrgService" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
     <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
     <RefAddresses>
-      <XmlRefAddr addrType="OrgCodeService">
+      <XmlRefAddr addrType="OrgService">
         <Contents>
-          <restconnection name="OrgCodeService"
+          <restconnection name="OrgService"
                           url="http://ussltcsnl3432.solutions.glbsnet.com:7004"/>
         </Contents>
       </XmlRefAddr>
