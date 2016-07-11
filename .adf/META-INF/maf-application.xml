@@ -4,4 +4,5 @@
                    appControllerFolder="ApplicationController"
                    listener-class="oracle.maf.impl.cdm.lifecycle.InitDBLifeCycleListener">
   <adfmf:featureReference refId="com.deloitte.inv.QualitySummary" id="fr1"/>
+  <adfmf:login defaultConnRefId="SNET"/>
 </adfmf:application>
